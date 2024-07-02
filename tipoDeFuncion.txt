@@ -1,0 +1,85 @@
+Tipo de Función			Ejemplo de Código				Uso
+
+//Sin retorno e sem parâmetros	function saludo() { ... }			Execução de um bloco de código simples.
+
+function saludar() {
+  console.log("¡Hola!");
+}
+
+saludar(); // Salida: "¡Hola!"
+
+//Sin retorno e com parâmetros	function saludar(nombre) { ... }		Execução de um bloco de código com argumentos.
+
+function presentarse(nombre) {
+  console.log(`Hola, mi nombre es ${nombre}.`);
+}
+
+presentarse("Juan"); // Salida: "Hola, mi nombre es Juan."
+
+//Com retorno e sem parâmetros	function generarNumeroAleatorio() { ... }	Cálculo e retorno de um valor específico.
+
+function obtenerNumeroAleatorio() {
+  return Math.floor(Math.random() * 100);
+}
+
+let numero = obtenerNumeroAleatorio();
+console.log(numero); // Salida: un número aleatorio entre 0 y 99
+
+//Com retorno e com parâmetros	function sumar(a, b) { ... }			Cálculo e retorno baseado em argumentos.
+
+function sumar(a, b) {
+  return a + b;
+}
+
+let resultado = sumar(5, 3);
+console.log(resultado); // Salida: 8
+
+//Função anônima			let saludo = function() { ... };		Definição de uma função sem nome localmente.
+
+let saludar = function() {
+  console.log("¡Hola!");
+};
+
+saludar(); // Salida: "¡Hola!"
+
+//Arrow function			let cuadrado = x => x * x;			Definição concisa de funções curtas.
+
+let cuadrado = x => x * x;
+
+let numero = cuadrado(5);
+console.log(numero); // Salida: 25
+
+app.js
+
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+}
+
+asignarTextoElemento('h1','El juego de Edo');
+asignarTextoElemento('p','El Juego consiste en practicar como un putas hasta saber alguna cosita');
+
+
+index.html
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Edo juego</title>
+</head>
+
+<body> 
+    
+    <h1></h1>
+    <p></p>
+    <script src="app.js" defer></script>
+</body>
+</html>
